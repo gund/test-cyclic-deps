@@ -1,0 +1,22 @@
+{
+  "name": "test-cyclic-deps",
+  "description": "This illustrates problem with cyclical dependencies and bundling issues",
+  "version": "1.0.0",
+  "author": "Alex Malkevich <malkevich.alex@gmail.com>",
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "serve": "http-server dist",
+    "copy:html": "copyup src/*.html dist",
+    "copy:js": "copyup src/errors.js dist",
+    "build": "npm-run-all -p build:* copy:*",
+    "build:webpack": "webpack",
+    "build:rollup": "rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "http-server": "^0.10.0",
+    "npm-run-all": "^4.0.2",
+    "rollup": "^0.47.4",
+    "webpack": "^3.5.5"
+  }
+}
