@@ -2,6 +2,10 @@
 
 > This illustrates problem with cyclical dependencies and bundling issues
 
+It illustrates how bundler tools like Rollup and Webpack deal
+(spoiler: they don't actually)
+by default with cyclical dependencies that you might introduce one day.
+
 ## Usage
 
 To check it in action first run
