@@ -8,14 +8,17 @@
     "serve": "http-server dist",
     "copy:html": "copyup src/*.html dist",
     "copy:js": "copyup src/errors.js dist",
+    "prebuild": "rimraf dist",
     "build": "npm-run-all -p build:* copy:*",
     "build:webpack": "webpack",
-    "build:rollup": "rollup -c rollup.config.js"
+    "build:rollup": "rollup -c rollup.config.js",
+    "bundle:docs": "npm run build && rimraf docs && copyup dist/* docs"
   },
   "devDependencies": {
     "copyfiles": "^1.2.0",
     "http-server": "^0.10.0",
     "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
     "rollup": "^0.47.4",
     "webpack": "^3.5.5"
   }
