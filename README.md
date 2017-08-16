@@ -6,7 +6,11 @@ It illustrates how bundler tools like Rollup and Webpack deal
 (spoiler: they don't actually)
 by default with cyclical dependencies that you might introduce one day.
 
-## Usage
+## Check it out
+
+Go to https://gund.github.io/test-cyclic-deps
+
+## Try it yourself
 
 To check it in action first run
 ```bash
